@@ -9,5 +9,6 @@ from .debugit import DebugIt
 from .infos import Infos
 from .lazyit import LazyIt
 from .logit import LogIt
+from .memit import MemIt
 from .saveit import SaveIt
 from .timeit import TimeIt
