@@ -1,10 +1,10 @@
-# PyMate
+# PyDevMate
 
 A Python utilities library providing decorator-based tools for common development tasks.
 
 ## Features
 
-PyMate offers a collection of reusable decorator classes that simplify common development tasks:
+PyDevMate offers a collection of reusable decorator classes that simplify common development tasks:
 
 ### Caching & Storage
 - **CacheIt**: Function result caching with support for diskcache, Redis, and SQLite backends
@@ -30,13 +30,13 @@ PyMate offers a collection of reusable decorator classes that simplify common de
 
 ```bash
 # Install latest version from main branch
-pip install git+https://github.com/lounisbou/PyMate.git
+pip install git+https://github.com/lounisbou/PyDevMate.git
 
 # Install specific branch
-pip install git+https://github.com/lounisbou/PyMate.git@branch-name
+pip install git+https://github.com/lounisbou/PyDevMate.git@branch-name
 
 # Install specific tag/release
-pip install git+https://github.com/lounisbou/PyMate.git@v0.0.1
+pip install git+https://github.com/lounisbou/PyDevMate.git@v0.0.1
 ```
 
 ### Install from source (development)
@@ -44,7 +44,7 @@ pip install git+https://github.com/lounisbou/PyMate.git@v0.0.1
 ```bash
 # Clone the repository
 git clone https://github.com/lounisbou/PyMate.git
-cd PyMate
+cd PyDevMate
 
 # Install in editable mode
 pip install -e .
@@ -121,4 +121,4 @@ LounisBou (lounis.bou@gmail.com)
 
 ## Repository
 
-https://github.com/lounisbou/PyMate
+https://github.com/lounisbou/PyDevMate

@@ -4,14 +4,14 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='PyMate',                   
+    name='PyDevMate',                   
     version='0.0.1',                   
     author='LounisBou',                
     author_email='lounis.bou@gmail.com',  
     description='A library of utilities for python.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/lounisbou/PyMate',  
+    url='https://github.com/lounisbou/PyDevMate',  
     license='MIT',                      
     packages=find_packages(),
     install_requires=[

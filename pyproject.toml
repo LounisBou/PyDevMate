@@ -3,7 +3,7 @@ requires = ["setuptools>=65.5.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "PyMate"
+name = "PyDevMate"
 version = "0.0.1"
 description = "A library of utilities for python."
 readme = "README.md"
@@ -35,9 +35,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/lounisbou/PyMate"
-Repository = "https://github.com/lounisbou/PyMate"
-Issues = "https://github.com/lounisbou/PyMate/issues"
+Homepage = "https://github.com/lounisbou/PyDevMate"
+Repository = "https://github.com/lounisbou/PyDevMate"
+Issues = "https://github.com/lounisbou/PyDevMate/issues"
 
 [tool.setuptools]
 packages = ["pymate"]

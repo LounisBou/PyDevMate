@@ -1,14 +1,14 @@
 Metadata-Version: 2.4
-Name: PyMate
+Name: PyDevMate
 Version: 0.0.1
 Summary: A library of utilities for python.
-Home-page: https://github.com/lounisbou/PyMate
+Home-page: https://github.com/lounisbou/PyDevMate
 Author: LounisBou
 Author-email: LounisBou <lounis.bou@gmail.com>
 License-Expression: MIT
-Project-URL: Homepage, https://github.com/lounisbou/PyMate
-Project-URL: Repository, https://github.com/lounisbou/PyMate
-Project-URL: Issues, https://github.com/lounisbou/PyMate/issues
+Project-URL: Homepage, https://github.com/lounisbou/PyDevMate
+Project-URL: Repository, https://github.com/lounisbou/PyDevMate
+Project-URL: Issues, https://github.com/lounisbou/PyDevMate/issues
 Keywords: utilities,decorators,caching,logging,monitoring,debugging
 Classifier: Programming Language :: Python :: 3
 Classifier: Programming Language :: Python :: 3.6
@@ -24,21 +24,23 @@ Classifier: Topic :: Software Development :: Libraries :: Python Modules
 Classifier: Topic :: Utilities
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
+License-File: LICENSE
 Requires-Dist: diskcache>=5.6.3
 Requires-Dist: psutil>=6.1.0
 Requires-Dist: redis>=5.2.0
 Requires-Dist: termcolor>=2.5.0
 Dynamic: author
 Dynamic: home-page
+Dynamic: license-file
 Dynamic: requires-python
 
-# PyMate
+# PyDevMate
 
 A Python utilities library providing decorator-based tools for common development tasks.
 
 ## Features
 
-PyMate offers a collection of reusable decorator classes that simplify common development tasks:
+PyDevMate offers a collection of reusable decorator classes that simplify common development tasks:
 
 ### Caching & Storage
 - **CacheIt**: Function result caching with support for diskcache, Redis, and SQLite backends
@@ -64,13 +66,13 @@ PyMate offers a collection of reusable decorator classes that simplify common de
 
 ```bash
 # Install latest version from main branch
-pip install git+https://github.com/lounisbou/PyMate.git
+pip install git+https://github.com/lounisbou/PyDevMate.git
 
 # Install specific branch
-pip install git+https://github.com/lounisbou/PyMate.git@branch-name
+pip install git+https://github.com/lounisbou/PyDevMate.git@branch-name
 
 # Install specific tag/release
-pip install git+https://github.com/lounisbou/PyMate.git@v0.0.1
+pip install git+https://github.com/lounisbou/PyDevMate.git@v0.0.1
 ```
 
 ### Install from source (development)
@@ -78,7 +80,7 @@ pip install git+https://github.com/lounisbou/PyMate.git@v0.0.1
 ```bash
 # Clone the repository
 git clone https://github.com/lounisbou/PyMate.git
-cd PyMate
+cd PyDevMate
 
 # Install in editable mode
 pip install -e .
@@ -125,17 +127,29 @@ python main.py <utility_name>
 python pymate/<module_name>.py
 ```
 
+## Building the Package
+
+```bash
+# Install build tools
+pip install build
+
+# Build wheel
+python -m build --wheel
+
+# Built wheel will be in dist/ directory
+```
+
 ## Requirements
 
 - Python >= 3.6
-- diskcache
-- psutil
-- redis
-- termcolor
+- diskcache >= 5.6.3
+- psutil >= 6.1.0
+- redis >= 5.2.0
+- termcolor >= 2.5.0
 
 ## License
 
-MIT License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Author
 
@@ -143,4 +157,4 @@ LounisBou (lounis.bou@gmail.com)
 
 ## Repository
 
-https://github.com/lounisbou/PyMate
+https://github.com/lounisbou/PyDevMate

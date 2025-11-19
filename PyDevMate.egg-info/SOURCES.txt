@@ -1,11 +1,12 @@
+LICENSE
 README.md
 pyproject.toml
 setup.py
-PyMate.egg-info/PKG-INFO
-PyMate.egg-info/SOURCES.txt
-PyMate.egg-info/dependency_links.txt
-PyMate.egg-info/requires.txt
-PyMate.egg-info/top_level.txt
+PyDevMate.egg-info/PKG-INFO
+PyDevMate.egg-info/SOURCES.txt
+PyDevMate.egg-info/dependency_links.txt
+PyDevMate.egg-info/requires.txt
+PyDevMate.egg-info/top_level.txt
 pymate/__init__.py
 pymate/cacheit.py
 pymate/colors.py
