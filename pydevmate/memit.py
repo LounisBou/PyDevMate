@@ -4,7 +4,7 @@
 import os
 import psutil
 import functools
-from pymate.convertIt import ConvertIt
+from pydevmate.convertIt import ConvertIt
 
 class MemIt:
     

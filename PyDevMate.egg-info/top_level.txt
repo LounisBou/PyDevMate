@@ -1,1 +1,1 @@
-pymate
+pydevmate

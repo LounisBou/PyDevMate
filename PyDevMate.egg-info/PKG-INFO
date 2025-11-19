@@ -79,7 +79,7 @@ pip install git+https://github.com/lounisbou/PyDevMate.git@v0.0.1
 
 ```bash
 # Clone the repository
-git clone https://github.com/lounisbou/PyMate.git
+git clone https://github.com/lounisbou/PyDevMate.git
 cd PyDevMate
 
 # Install in editable mode
@@ -92,7 +92,7 @@ pip install -r requirements.txt
 ## Quick Start
 
 ```python
-from pymate import CacheIt, TimeIt, LogIt, MemIt
+from pydevmate import CacheIt, TimeIt, LogIt, MemIt
 
 # Cache function results
 @CacheIt()
@@ -124,7 +124,7 @@ python main.py
 python main.py <utility_name>
 
 # Test individual module directly
-python pymate/<module_name>.py
+python pydevmate/<module_name>.py
 ```
 
 ## Building the Package

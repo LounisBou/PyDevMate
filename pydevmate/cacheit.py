@@ -4,7 +4,7 @@
 import functools
 from diskcache import Cache
 from typing import Any, Optional
-from pymate.saveit import SaveIt
+from pydevmate.saveit import SaveIt
 
 class CacheIt:
     """

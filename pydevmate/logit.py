@@ -5,8 +5,8 @@ import logging
 import os
 from typing import Optional
 from termcolor import colored
-from pymate.colors import Colors
-from pymate.infos import Infos
+from pydevmate.colors import Colors
+from pydevmate.infos import Infos
 
 class LogIt(logging.Logger):
     
