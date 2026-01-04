@@ -82,87 +82,130 @@ class LogIt(logging.Logger):
         except Exception as e:
             print(f"Failed to create file handler: {e}")
     
-    def debug(self, message: str, color: Colors = Colors.CYAN, attrs=[]) -> None:
+    def debug(self, message: str, *args, color: Colors = Colors.CYAN, attrs=[], **kwargs) -> None:
         """
         Log a debug message.
         Args:
-            message (str): The message to log.
+            message (str): The message to log (supports % formatting).
+            *args: Arguments for string formatting.
             color (Colors): The color of the message.
+            attrs (list): Text attributes.
+            **kwargs: Additional keyword arguments passed to parent logger.
         """
-        super().debug(colored(message, color.value, attrs=[attr.value for attr in attrs if isinstance(attr, Colors)]))
+        if args:
+            message = message % args
+        super().debug(colored(message, color.value, attrs=[attr.value for attr in attrs if isinstance(attr, Colors)]), **kwargs)
         
-    def info(self, message: str, color: Colors = Colors.WHITE, attrs: list = []) -> None:
+    def info(self, message: str, *args, color: Colors = Colors.WHITE, attrs: list = [], **kwargs) -> None:
         """
         Log an info message.
         Args:
-            message (str): The message to log.
+            message (str): The message to log (supports % formatting).
+            *args: Arguments for string formatting.
             color (Colors): The color of the message.
+            attrs (list): Text attributes.
+            **kwargs: Additional keyword arguments passed to parent logger.
         """
-        super().info(colored(message, color.value, attrs=[attr.value for attr in attrs if isinstance(attr, Colors)]))
+        if args:
+            message = message % args
+        super().info(colored(message, color.value, attrs=[attr.value for attr in attrs if isinstance(attr, Colors)]), **kwargs)
         
-    def success(self, message: str, color: Colors = Colors.GREEN, attrs: list = []) -> None:
+    def success(self, message: str, *args, color: Colors = Colors.GREEN, attrs: list = [], **kwargs) -> None:
         """
         Log a success message.
         Args:
-            message (str): The message to log.
+            message (str): The message to log (supports % formatting).
+            *args: Arguments for string formatting.
             color (Colors): The color of the message.
+            attrs (list): Text attributes.
+            **kwargs: Additional keyword arguments passed to parent logger.
         """
-        self.info(colored(message, color.value, attrs=[attr.value for attr in attrs if isinstance(attr, Colors)]))
+        if args:
+            message = message % args
+        self.info(colored(message, color.value, attrs=[attr.value for attr in attrs if isinstance(attr, Colors)]), **kwargs)
         
-    def show(self, message: str, color: Colors = Colors.LIGHT_BLUE, attrs: list = [Colors.BOLD]) -> None:
+    def show(self, message: str, *args, color: Colors = Colors.LIGHT_BLUE, attrs: list = [Colors.BOLD], **kwargs) -> None:
         """
         Log a show message.
         Args:
-            message (str): The message to log.
+            message (str): The message to log (supports % formatting).
+            *args: Arguments for string formatting.
             color (Colors): The color of the message.
+            attrs (list): Text attributes.
+            **kwargs: Additional keyword arguments passed to parent logger.
         """
+        if args:
+            message = message % args
         # Get .value of each attrs element if it is a Colors enum
-        self.info(colored(message, color.value, attrs=[attr.value for attr in attrs if isinstance(attr, Colors)]))
+        self.info(colored(message, color.value, attrs=[attr.value for attr in attrs if isinstance(attr, Colors)]), **kwargs)
     
-    def warning(self, message: str, color: Colors = Colors.YELLOW, attrs: list = []) -> None:
+    def warning(self, message: str, *args, color: Colors = Colors.YELLOW, attrs: list = [], **kwargs) -> None:
         """
         Log a warning message.
         Args:
-            message (str): The message to log.
+            message (str): The message to log (supports % formatting).
+            *args: Arguments for string formatting.
             color (Colors): The color of the message.
+            attrs (list): Text attributes.
+            **kwargs: Additional keyword arguments passed to parent logger.
         """
-        super().warning(colored(message, color.value, attrs=[attr.value for attr in attrs if isinstance(attr, Colors)]))
+        if args:
+            message = message % args
+        super().warning(colored(message, color.value, attrs=[attr.value for attr in attrs if isinstance(attr, Colors)]), **kwargs)
         
-    def warn(self, message: str, color: Colors = Colors.YELLOW, attrs: list = []) -> None:
+    def warn(self, message: str, *args, color: Colors = Colors.YELLOW, attrs: list = [], **kwargs) -> None:
         """
         Alias for warning.
         Args:
-            message (str): The message to log.
+            message (str): The message to log (supports % formatting).
+            *args: Arguments for string formatting.
             color (Colors): The color of the message.
+            attrs (list): Text attributes.
+            **kwargs: Additional keyword arguments passed to parent logger.
         """
-        self.warning(message, color=color, attrs=attrs)
+        self.warning(message, *args, color=color, attrs=attrs, **kwargs)
         
-    def error(self, message: str, color: Colors = Colors.RED, attrs: list = []) -> None:
+    def error(self, message: str, *args, color: Colors = Colors.RED, attrs: list = [], **kwargs) -> None:
         """
         Log an error message.
         Args:
-            message (str): The message to log.
+            message (str): The message to log (supports % formatting).
+            *args: Arguments for string formatting.
             color (Colors): The color of the message.
+            attrs (list): Text attributes.
+            **kwargs: Additional keyword arguments passed to parent logger.
         """
-        super().error(colored(message, color.value, attrs=[attr.value for attr in attrs if isinstance(attr, Colors)]))
+        if args:
+            message = message % args
+        super().error(colored(message, color.value, attrs=[attr.value for attr in attrs if isinstance(attr, Colors)]), **kwargs)
         
-    def critical(self, message: str, color: Colors = Colors.MAGENTA, attrs: list = []) -> None:
+    def critical(self, message: str, *args, color: Colors = Colors.MAGENTA, attrs: list = [], **kwargs) -> None:
         """
         Log a critical message.
         Args:
-            message (str): The message to log.
+            message (str): The message to log (supports % formatting).
+            *args: Arguments for string formatting.
             color (Colors): The color of the message.
+            attrs (list): Text attributes.
+            **kwargs: Additional keyword arguments passed to parent logger.
         """
-        super().critical(colored(message, color.value, attrs=[attr.value for attr in attrs if isinstance(attr, Colors)]))
+        if args:
+            message = message % args
+        super().critical(colored(message, color.value, attrs=[attr.value for attr in attrs if isinstance(attr, Colors)]), **kwargs)
         
-    def exception(self, message: str, color: Colors = Colors.RED, attrs: list = []) -> None:
+    def exception(self, message: str, *args, color: Colors = Colors.RED, attrs: list = [], **kwargs) -> None:
         """
         Log an exception message.
         Args:
-            message (str): The message to log.
+            message (str): The message to log (supports % formatting).
+            *args: Arguments for string formatting.
             color (Colors): The color of the message.
+            attrs (list): Text attributes.
+            **kwargs: Additional keyword arguments passed to parent logger (e.g., exc_info).
         """
-        super().exception(colored(message, color.value, attrs=[attr.value for attr in attrs if isinstance(attr, Colors)]))
+        if args:
+            message = message % args
+        super().exception(colored(message, color.value, attrs=[attr.value for attr in attrs if isinstance(attr, Colors)]), **kwargs)
         
     def separator(self, size: int = 100, color: Colors = Colors.WHITE, attrs=['bold']) -> None:
         """
